@@ -8,7 +8,7 @@
           <span class="mx-4"> |</span>
         </li>
         <li>
-          <NuxtLink :to="{route}">{{ title }}</NuxtLink>
+          <NuxtLink :to="route">{{ title }}</NuxtLink>
         </li>
       </ul>
     </div>
@@ -23,5 +23,7 @@ li {
 </style>
 
 <script setup>
-const props = defineProps(["title", "subtitle","route"]);
+const prop= defineProps(["title", "subtitle","route"]);
+ 
+ 
 </script>

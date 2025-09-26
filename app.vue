@@ -6,13 +6,14 @@
   </div>
 </template>
 
-
 <style>
 @import "tailwindcss";
 
 .container {
-  width: 1320px;
+  width: 1340px;
   margin: 0 auto;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .fixed-position {
@@ -22,5 +23,4 @@
 .navbar ul li {
   margin-left: 60px;
 }
-
 </style>

@@ -40,7 +40,7 @@
         </div >
           <ul class="fooNav flex flex-col items-center space-x-3" >
             <li><NuxtLink to="/about">О нас</NuxtLink></li>
-            <li><NuxtLink to="/product">Продукция</NuxtLink></li>
+            <li><NuxtLink to="/product1">Продукция</NuxtLink></li>
             <li><NuxtLink to="/galery">Галерея</NuxtLink></li>
             <li><NuxtLink to="/contact">Контакты</NuxtLink></li>
             <li><NuxtLink to="/news">Новости и пресса</NuxtLink></li>

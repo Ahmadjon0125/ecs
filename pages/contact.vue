@@ -3,7 +3,7 @@
     <Breadcrumb
       :title="' Контакты'"
       :subtitle="'Главная '"
-      :route="'/contact'"
+      route="/contact"
     />
   </div>
   <section>
@@ -55,3 +55,7 @@
   background-size: cover;
 }
 </style>
+
+<script setup>
+
+</script>
