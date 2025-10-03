@@ -8,7 +8,7 @@
   </div>
   <section>
     <div class="container">
-      <ul class="grid grid-cols-3 gap-30 text-center py-20">
+      <ul class="grid sm:grid-cols-3 grid-cols-1 sm:gap-20 lg:gap-30 gap-10 text-center py-20">
         <li>
           <h2 class="text-[#146699] font-semibold text-[16px] uppercase">
             Адрес
@@ -38,11 +38,12 @@
     <iframe
       src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d23958.160987789317!2d69.3950266!3d41.357350000000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2s!4v1758787768332!5m2!1sen!2s"
       width="100%"
-      height="700"
+      height="300"
       style="border: 0"
       allowfullscreen=""
       loading="lazy"
       referrerpolicy="no-referrer-when-downgrade"
+      class="sm:h-100 md:h-150"
     ></iframe>
   </section>
 </template>
@@ -53,6 +54,13 @@
   height: 50vh;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+@media (max-width:640px) {
+  .contact-hero {
+  height: 30vh;
+
+}
 }
 </style>
 

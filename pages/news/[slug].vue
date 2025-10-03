@@ -12,7 +12,7 @@
       <div v-for="(item, index) in items" :key="index" class="lg:px-50 py-2">
         <div v-if="item.slug == $route.params.slug">
           <img :src="item.img" alt="" width="1100px" height="600px" />
-          <h2 class="text-[#323232] font-bold text-[30px] mb-4">
+          <h2 class="text-[#323232] font-bold sm:text-[30px] text-[20px] mb-4">
             {{ item.title }}
           </h2>
           <p class="flex mb-5 text-[#146699] font-semibold text-[18px]">
@@ -24,10 +24,10 @@
               class="mr-2 #323232"
             />{{ item.date }}
           </p>
-          <p class="text-[#323232] text-[18px] font-medium mb-2">
+          <p class="text-[#323232] sm:text-[18px] font-medium mb-2">
             {{ item.text }} {{ item.text }}{{ item.text }}{{ item.text }}
           </p>
-          <p class="text-[#323232] text-[18px] font-medium mb-12">
+          <p class="text-[#323232] sm:text-[18px] font-medium mb-12">
             {{ item.text }}{{ item.text }}{{ item.text }}{{ item.text }}
           </p>
         </div>

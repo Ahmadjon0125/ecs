@@ -10,10 +10,11 @@
 @import "tailwindcss";
 
 .container {
-  width: 1340px;
+  max-width: 1340px;
+  width: 100%;
   margin: 0 auto;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .fixed-position {

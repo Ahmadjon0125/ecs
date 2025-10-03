@@ -1,25 +1,39 @@
-<template class="py-15 ">
-  <div class="container">
-    <div class="flex py-15">
-      <img :src="content.img" width="420px" height="420px" alt="" />
-      <div class="bg-[#F4F9FB] w-full pl-20 pr-30 pt-20">
-        <h2 class="font-bold text-[20px] text-[#323232]">{{ content.title }}</h2>
-        <p class="text-[#146699] text-[16px] font-semibold mb-3">{{content.date}}</p>
-        <p class="font-medium text-[16px] text-[#323232] mb-6">{{content.text}}</p>
-        <NuxtLink :to="`/news/${content.slug}`" class="border py-2 px-8 font-semibold uppercase text-[12px] text-[#146699] border-[#146699] hover:bg-[#146699] hover:text-white">Подробнее</NuxtLink>
+<template class="py-15">
+  <NuxtLink :to="`/news/${content.slug}`">
+    <div class="flex flex-col sm:flex-row  py-15">
+      <div class="w-full max-w-[420px] max-h-[420px] h-full">
+        <img
+          :src="content.img"
+          class="h-full w-full object-cover"
+          alt=""
+        />
+      </div>
+      <div
+        class="bg-[#F4F9FB] w-full lg:pl-20 sm:pl-8 sm:pr-10 pt-20 pb-5 pl-3"
+      >
+        <h2 class="font-bold text-[20px] text-[#323232]">
+          {{ content.title }}
+        </h2>
+        <p class="text-[#146699] text-[16px] font-semibold mb-3">
+          {{ content.date }}
+        </p>
+        <p class="font-medium text-[16px] text-[#323232] mb-6">
+          {{ content.text }}
+        </p>
+        <NuxtLink
+          class="border py-2 mb-2 px-8 font-semibold uppercase text-[12px] text-[#146699] border-[#146699] hover:bg-[#146699] hover:text-white"
+          >Подробнее</NuxtLink
+        >
       </div>
     </div>
-  </div >
+  </NuxtLink>
 </template>
 
-
 <script setup>
-
-defineProps ({
-    content : {
-        type: Object,
-        required: true
-    }
-})
-
+defineProps({
+  content: {
+    type: Object,
+    required: true,
+  },
+});
 </script>

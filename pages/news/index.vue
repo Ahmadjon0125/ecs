@@ -7,12 +7,14 @@
     />
   </div>
   <section>
-    <News :content="content1" />
-    <News :content="content2" />
-    <News :content="content3" />
-    <News :content="content4" />
-    <News :content="content5" />
-    <News :content="content6" />
+    <div class="container">
+      <News :content="content1" />
+      <News :content="content2" />
+      <News :content="content3" />
+      <News :content="content4" />
+      <News :content="content5" />
+      <News :content="content6" />
+    </div>
   </section>
 </template>
 

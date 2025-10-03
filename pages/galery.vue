@@ -1,74 +1,156 @@
 <template>
   <div class="galery-hero pt-35">
     <Breadcrumb
-      :title="'  Галерея '"
+      :title="'Галерея '"
       :subtitle="'Главная '"
       :route="'/galery'"
     />
   </div>
 
-  <section class="py-15">
+  <section class="sm:py-15 py-5">
     <div class="container">
-      <div>
-        <el-tabs type="card" class="demo-tabs border-b-none">
+      <div class="">
+        <el-tabs type="card" class="demo-tabs ">
           <el-tab-pane label="Фото">
-            <h2 class="font-semibold uppercase text-[#146699] py-10">Фото</h2>
+            <h2 class="font-semibold uppercase text-[#146699] py-4">Фото</h2>
 
-             <el-carousel 
-                ref="carouselRef" 
-                :initial-index="activeIndex"
-                arrow="always"
-                :autoplay="false"
-                @change="handleSlideChange"
-                class="mb-4"
-              >
-                <el-carousel-item v-for="(item, index) in srcList" :key="index">
-                  <img :src="item" alt="Galereya rasmi" class="carousel-image-content">
-                </el-carousel-item>
-              </el-carousel>
+  
 
-              <div class="thumbnail-nav">
-                <div 
-                  v-for="(item, index) in srcList" 
-                  :key="index"
-                  class="thumbnail-item"
-                  :class="{ 'is-active': index === activeIndex }"
-                  @click="changeSlide(index)"
-                >
-                  <img :src="item" alt="Thumbnail" class="thumbnail-image" />
-                </div>
-              </div>
+
+
+
+                 <el-carousel 
+      ref="carouselRef" 
+      :initial-index="activeIndex"
+      arrow="always"
+      :autoplay="false"
+      @change="handleSlideChange"
+      class="mb-4 max-w-[1280px] mx-auto"
+    >
+      <el-carousel-item 
+        v-for="(item, index) in srcList" 
+        :key="index"
+        @click="openModal(index)" 
+      >
+        <img :src="item" alt="Galereya rasmi" class="carousel-image-content cursor-pointer">
+      </el-carousel-item>
+    </el-carousel>
+
+    <!-- Thumbnail navigatsiya -->
+    <div class="thumbnail-nav ">
+      <div 
+        v-for="(item, index) in srcList" 
+        :key="index"
+        class="thumbnail-item "
+        :class="{ 'is-active ': index === activeIndex }"
+        @click="changeSlide(index)"
+      >
+        <img :src="item" alt="Thumbnail" class="thumbnail-image  " />
+      </div>
+    </div>
+
+    <!-- Modal qismi -->
+    <div 
+      v-if="isImageModalOpen" 
+      class="fixed inset-0 z-60 flex items-center justify-center bg-black/90"
+    >
+
+    <div class="relative w-full max-w-[1380px] p-0 bg-transparent">
+
+      <button 
+        @click="isImageModalOpen = false" 
+        class="absolute -top-15 right-0 text-white text-3xl font-bold hover:text-gray-300"
+      >
+        &times;
+      </button>
+
+      <div class="relative w-full max-w-[1380px]">
+        <el-carousel 
+          ref="modalCarouselRef" 
+          :initial-index="modalActiveIndex"
+          arrow="always"
+          :autoplay="false"
+        >
+          <el-carousel-item 
+            v-for="(item, index) in srcList" 
+            :key="index"
+          >
+            <img :src="item" alt="Modal rasm" class="w-full h-full object-cover">
+          </el-carousel-item>
+        </el-carousel>
+      </div>
+    </div>
+    </div>
+                
 
           </el-tab-pane>
           <el-tab-pane label="Видео">
             <h2>Видео</h2>
 
 
-               <div class="video-gallery mt-8">
-                
-                <div class="main-video-block relative mb-6">
-                  <img :src="videoCover1" alt="Asosiy Video" class="video-cover">
-                  <button class="play-button absolute inset-0 flex items-center justify-center" @click="openVideo(videoUrl1)">
-                    <svg viewBox="0 0 24 24" fill="white" stroke="currentColor" stroke-width="1.5" class="w-16 h-16 bg-black/50 rounded-full p-4 transition-all hover:bg-black/70">
-                      <path stroke-linecap="round" stroke-linejoin="round" d="M5.25 5.25l13.5 6.75-13.5 6.75V5.25z"/>
-                    </svg>
-                  </button>
-                  <p class="video-caption absolute bottom-0 left-0 text-white p-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-                </div>
+              <div class="max-w-[1280px] mx-auto p-4">
+    
+    <div class="relative w-full aspect-video shadow-xl mb-8 rounded-lg overflow-hidden">
+        
+        <div 
+            @click="isModalOpen = true" 
+            class="absolute inset-0 z-10 flex items-center justify-center cursor-pointer bg-black/20 hover:bg-black/40 transition">
+            
+            <svg class="w-10 h-10 text-white opacity-90" viewBox="0 0 24 24" fill="currentColor"><path d="M6 3l15 9-15 9V3z"/></svg>
+            <p class="absolute bottom-4 left-4 text-white text-base max-w-sm">{{ activeVideo.posterText }}</p>
+        </div>
+        
+        <iframe
+            class="w-full h-full" 
+            :src="`https://www.youtube.com/embed/${activeVideo.embedId}`"
+            title="Video pleer"
+            frameborder="0"
+            allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+        ></iframe>
+    </div>
 
-                <div class="grid grid-cols-3 gap-6">
-                  <div v-for="(video, index) in smallVideos" :key="index" class="small-video-item relative mb-15" @click="openVideo(video.url)">
-                    <img :src="video.cover" :alt="'Video ' + (index + 2)" class="video-cover">
-                    <button class="play-button absolute inset-0 flex items-center justify-center" >
-                      <svg viewBox="0 0 24 24" fill="white" stroke="currentColor" stroke-width="1.5" class="w-10 h-10 bg-black/50 rounded-full p-2 transition-all hover:bg-black/70">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M5.25 5.25l13.5 6.75-13.5 6.75V5.25z"/>
-                      </svg>
-                    </button>
-                    <p class="video-caption-small  text-[18px] text-[#323232] font-semibold  ">{{ video.caption}}</p>
-                  </div>
-                </div>
-
-              </div>
+    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4 z-20">
+        <div 
+            v-for="video in videos" 
+            :key="video.id" 
+            @click="selectVideo(video)" 
+            class="relative aspect-video cursor-pointer rounded-lg overflow-hidden border-2 transition mb-20 z-20"
+            :class="{'border-blue-600 shadow-md': video.id === activeVideo.id, 'border-transparent': video.id !== activeVideo.id}"
+        >
+            <img 
+                :src="`https://img.youtube.com/vi/${video.embedId}/mqdefault.jpg`" 
+                :alt="video.title"
+                class="w-full h-full object-cover transition duration-300"
+            >
+             <svg class="absolute inset-0 m-auto w-8 h-8 text-white opacity-90" viewBox="0 0 24 24" fill="currentColor"><path d="M6 3l15 9-15 9V3z"/></svg>
+            
+            <p class="absolute top-92  z-200 bg-black left-2 text-white text-lg max-w-full truncate">{{ video.title }}</p>
+        </div>
+    </div>
+    
+    <div v-if="isModalOpen" 
+         class="fixed inset-0 z-60 flex items-center justify-center bg-black/90"
+         @click="isModalOpen = false" > 
+      
+        <div @click.stop class="relative w-11/12 max-w-5xl p-0 bg-transparent">
+            <button @click="isModalOpen = false" class="absolute -top-10 right-0 text-white text-3xl font-bold z-50 hover:text-gray-300">
+                &times;
+            </button>
+            <div class="relative w-full aspect-video">
+                <iframe
+                    class="w-full h-full" 
+                    :src="`https://www.youtube.com/embed/${activeVideo.embedId}?autoplay=1`"
+                    :title="activeVideo.title"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen
+                ></iframe>
+            </div>
+        </div>
+    </div>
+    
+  </div>
 
 
           </el-tab-pane>
@@ -80,10 +162,17 @@
 
 <style>
 .galery-hero {
-  background-image: url("galeryBg.png");
+  background-image: url("/galeryBg.png");
   height: 50vh;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+@media (max-width:640px) {
+  .galery-hero {
+  height: 30vh;
+
+}
 }
 
 .demo-tabs > .el-tabs__content {
@@ -103,7 +192,22 @@
 .el-tabs__item {
   font-size: 20px;
   border-radius: none;
+  margin-right: 30px; 
+  
 }
+
+.el-tabs--card>.el-tabs__header .el-tabs__item {
+  border: 2px solid rgba(20, 102, 153, 1);
+  border-top: 3px solid rgba(20, 102, 153, 1);
+ 
+}
+
+
+.el-tabs--card>.el-tabs__header .el-tabs__item:first-child  {
+  border-left: 2px solid rgba(20, 102, 153, 1);
+
+}
+ 
 
 .el-tabs__item.is-active {
   background-color: #146699;
@@ -111,8 +215,13 @@
 }
 
 .el-tabs--card > .el-tabs__header {
-  border-bottom: none;
+  border: none;
 }
+
+.el-tabs--card>.el-tabs__header .el-tabs__nav{
+  border: transparent;
+}
+
 
 .el-carousel__item h3 {
   display: flex;
@@ -132,10 +241,6 @@
 
 
 
-.el-carousel__container {
-  height: 600px;
-}
-
 
 
 
@@ -148,29 +253,54 @@
 /* 5. Asosiy rasm balandligi uchun stil */
 .el-carousel__container {
   height: 600px;
+  
 }
+
+@media (max-width: 1000px) {
+  .el-carousel__container {
+  height: 400px;
+  
+}
+} 
+
+@media (max-width: 600px) {
+  .el-carousel__container {
+  height: 200px;
+  
+}
+} 
+
+@media (max-width: 350px) {
+  .el-carousel__container {
+  height: 100px;
+  
+}
+} 
+
 .carousel-image-content {
   width: 100%;
-  height: 100%; /* Konteyner balandligiga moslashtirish */
+  height: 100%;
   object-fit: cover;
 }
 
 /* 6. Thumbnail Navigatsiya stili */
 .thumbnail-nav {
+ 
   display: flex;
-  gap: 10px;
-  justify-content: center;
+  justify-content: space-between;
   margin-top: 20px;
+  gap: 5px;
+  /* width: 1320px; */
   /* El-tabs ichidagi standart paddingni hisobga olish uchun */
-  padding: 0 62px; 
+  /* padding: 0 62px;  */
 }
 
 .thumbnail-item {
-  width: 100px; 
-  height: 70px; 
+  max-width: 180px; 
+  max-height: 140px; 
   overflow: hidden;
   cursor: pointer;
-  border: 3px solid transparent;
+  border-bottom: 3px solid transparent;
   transition: border-color 0.3s, opacity 0.3s;
   opacity: 0.7;
 }
@@ -185,6 +315,29 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.thumbnail-item {
+  cursor: pointer;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+@media (max-width:600px) {
+  .thumbnail-item {
+    padding-bottom: 2px;
+  }
+}
+
+.thumbnail-item::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 6px;
+  background-color: transparent;
+  transition: background-color 0.3s;
 }
 
 
@@ -233,6 +386,40 @@
 
 <script setup>
 
+
+const modalCarouselRef = ref(null);
+
+
+const modalActiveIndex = ref(0);
+
+
+
+const openModal = (index) => {
+  modalActiveIndex.value = index;  // qaysi rasm bosilgan bo‘lsa o‘shandan boshlaydi
+  isImageModalOpen.value = true;
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 import { ref } from 'vue';
 
 // 1. Carousel komponentiga murojaat qilish ref'i
@@ -265,31 +452,42 @@ const handleSlideChange = (newIndex) => {
 };
 
 
+const isImageModalOpen = ref(false);
+const activeImage = ref(null);
 
-// Video ma'lumotlari
-const videoCover1 = '/img1.jpg'; // Asosiy katta video uchun cover rasm
-const videoUrl1 = 'https://www.youtube.com/watch?v=fTPCKnZZ2dk'; // Asosiy video manzili
-
-const smallVideos = [
-  { cover: '/img1.jpg', url: 'https://www.youtube.com/watch?v=fTPCKnZZ2dk', caption: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit' },
-  { cover: '/img2.jpg', url: 'https://www.youtube.com/watch?v=fTPCKnZZ2dk', caption: 'Ut enim ad minim veniam, quis nostrud exercitation' },
-  { cover: '/img3.jpg', url: 'https://www.youtube.com/watch?v=fTPCKnZZ2dk', caption: 'Duis aute irure dolor in reprehenderit in voluptate' },
-  { cover: '/img4.jpg', url: 'https://www.youtube.com/watch?v=fTPCKnZZ2dk', caption: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit' },
-  { cover: '/img5.jpg', url: 'https://www.youtube.com/watch?v=fTPCKnZZ2dk', caption: 'Ut enim ad minim veniam, quis nostrud exercitation' },
-  { cover: '/img6.jpg', url: 'https://www.youtube.com/watch?v=fTPCKnZZ2dk', caption: 'Duis aute irure dolor in reprehenderit in voluptate' },
-];
-
-// Videoni ochish funksiyasi (Masalan, yangi oynada ochadi yoki Modal/Dialog ishlatadi)
-const openVideo = (url) => {
-  // Eng oddiy yechim: yangi oynada ochish
-  window.open(url, '_blank'); 
-
-  /* Agar siz Element Plus dialogini ishlatmoqchi bo'lsangiz:
-  // dialog ochish logikasini shu yerga yozasiz, 
-  // va dialog ichida <iframe :src="url" ...> ni joylashtirasiz.
-  */
+const openImage = (img) => {
+  activeImage.value = img;
+  isImageModalOpen.value = true;
 };
 
-// ... (srcList va boshqa oldingi ref/const'laringizni saqlang) ...
+
+
+
+
+
+// 1. Video ma'lumotlari: Har bir video uchun noyob ID va sarlavha
+const videos = ref([
+    { id: 1, embedId: 'fTPCKnZZ2dk', title: 'Nuxt 3 — Course for Beginners', posterText: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit' },
+    { id: 2, embedId: 'rCT54d8sMWk', title: 'Video 2 Sarlavhasi', posterText: 'Ut enim ad minim veniam, quis nostrud' },
+    { id: 3, embedId: '9dI_FENApz0', title: 'Video 3 Sarlavhasi', posterText: 'Duis aute irure dolor in reprehenderit' },
+    { id: 4, embedId: 'NXTQbU7WmDk', title: 'Nuxt 3 — Course for Beginners', posterText: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit' },
+    { id: 5, embedId: 'RhZZ0whiuT8', title: 'Video 2 Sarlavhasi', posterText: 'Ut enim ad minim veniam, quis nostrud' },
+    { id: 6, embedId: 'GBdO5myZNsQ', title: 'Video 3 Sarlavhasi', posterText: 'Duis aute irure dolor in reprehenderit' },
+    // ... boshqa videolar
+]);
+
+// 2. Hozirda faol bo'lgan videoni saqlash (default birinchi video)
+const activeVideo = ref(videos.value[0]);
+
+// 3. Modal holati
+const isModalOpen = ref(false);
+
+// 4. Boshqa videoni tanlash funksiyasi
+const selectVideo = (video) => {
+    activeVideo.value = video;
+};
+
+
+
 
 </script>

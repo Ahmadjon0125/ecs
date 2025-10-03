@@ -14,6 +14,13 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+@media (max-width:640px) {
+  .about-hero {
+  height: 30vh;
+
+}
+}
 </style>
 
 <script setup>

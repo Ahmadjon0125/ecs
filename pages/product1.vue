@@ -9,11 +9,11 @@
   <!--          ---------------------------         -->
   <section>
     <div class="container">
-      <ul class="grid grid-cols-3 gap-20 py-20">
-        <li class="flex items-end">
+      <ul class="flex flex-wrap  text-center py-20 mx-auto xl:justify-between justify-around gap-6">
+        <li class="flex items-center sm:items-end flex-col sm:flex-row max-w-[420px] my-10">
           <img src="../public/banka.png" width="120px" height="297px" alt="" />
-          <div class="ml-5">
-            <h2 class="text-[#146699] font-semibold text-[30px] uppercase">
+          <div class="ml-5 mt-5">
+            <h2 class="text-[#146699] font-semibold text-[20px] uppercase">
               Банка 1
             </h2>
             <p class="py-3 font-semibold text-[20px] text-[#323232]">450 мл</p>
@@ -23,10 +23,10 @@
             </p>
           </div>
         </li>
-        <li class="flex items-end">
+        <li class="flex items-center sm:items-end flex-col sm:flex-row max-w-[420px] my-10">
           <img src="../public/banka.png" width="120px" height="287px" alt="" />
-          <div class="ml-5">
-            <h2 class="text-[#146699] font-semibold text-[30px] uppercase">
+          <div class="ml-5 mt-5">
+            <h2 class="text-[#146699] font-semibold text-[20px] uppercase">
               Банка 2
             </h2>
             <p class="py-3 font-semibold text-[20px] text-[#323232]">330 мл</p>
@@ -36,10 +36,10 @@
             </p>
           </div>
         </li>
-        <li class="flex items-end">
+        <li class="flex items-center sm:items-end flex-col sm:flex-row max-w-[420px] xl:mx-auto my-10">
           <img src="../public/banka.png" width="120px" height="277px" alt="" />
-          <div class="ml-5">
-            <h2 class="text-[#146699] font-semibold text-[30px] uppercase">
+          <div class="ml-5 mt-5">
+            <h2 class="text-[#146699] font-semibold text-[20px] uppercase">
               Банка 3
             </h2>
             <p class="py-3 font-semibold text-[20px] text-[#323232]">250 мл</p>
@@ -55,10 +55,10 @@
   <!--     ----------------------------    -->
   <section class="bg-[#F4F9FB] py-25">
     <div class="container">
-      <h2 class="font-semibold uppercase text-[50px] text-[#146699]">
+      <h2 class="sm:font-semibold font-bold uppercase sm:text-[50px] text-[17px] text-[#146699]">
         преимущества банок
       </h2>
-      <div class="my-5 grid grid-cols-2 gap-8">
+      <div class="my-5 grid sm:grid-cols-2 grid-cols-1 gap-8">
         <ProductCard :content="card1" />
         <ProductCard :content="card2" />
         <ProductCard :content="card3" />
@@ -110,6 +110,13 @@
   height: 50vh;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+@media (max-width:640px) {
+  .about-hero {
+  height: 35vh;
+
+}
 }
 </style>
 
