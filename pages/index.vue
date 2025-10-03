@@ -205,7 +205,7 @@
   
 
 
-  <section class="sm:py-6 pt-4 pb-6 bg-[#F4F9FB]">
+  <section class="sm:py-6 pt-4 pb-6 ">
     <div class="container">
       <div class="product ">
         <h2
