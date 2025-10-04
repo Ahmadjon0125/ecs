@@ -168,12 +168,12 @@
     
 
     <div v-if="isModalOpen" 
-         class="fixed inset-0 z-60 flex items-center justify-center bg-black/90"
+         class="fixed inset-0 z-200 flex items-center justify-center bg-black/90"
          @click="isModalOpen = false" > 
       
-        <div @click.stop class="relative w-11/12 max-w-5xl p-0 bg-transparent">
+        <div @click.stop class="relative w-11/12 max-w-5xl p-0 bg-black">
             
-            <button @click="isModalOpen = false" class="absolute -top-10 right-0 text-white text-3xl font-bold z-50 hover:text-gray-300">
+            <button @click="isModalOpen = false" class="absolute -top-10 right-0 text-white text-3xl font-bold z-50 hover:text-gray-500">
                 &times;
             </button>
 
@@ -373,7 +373,7 @@ const videoSrcAutoplay = videoSrcEmbed + "?autoplay=1";
 
 
 
-const showPreview = ref(false);
+// const showPreview = ref(false);
 
 const srcList = [
   "/img1.jpg",

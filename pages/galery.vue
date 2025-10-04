@@ -52,7 +52,7 @@
     <!-- Modal qismi -->
     <div 
       v-if="isImageModalOpen" 
-      class="fixed inset-0 z-60 flex items-center justify-center bg-black/90"
+      class="fixed inset-0 z-200 flex items-center justify-center bg-black/90"
     >
 
     <div class="relative w-full max-w-[1380px] p-0 bg-transparent">
@@ -130,7 +130,7 @@
     </div>
     
     <div v-if="isModalOpen" 
-         class="fixed inset-0 z-60 flex items-center justify-center bg-black/90"
+         class="fixed inset-0 z-200 flex items-center justify-center bg-black/90"
          @click="isModalOpen = false" > 
       
         <div @click.stop class="relative w-11/12 max-w-5xl p-0 bg-transparent">

@@ -9,7 +9,7 @@
   <!--          ---------------------------         -->
   <section>
     <div class="container">
-      <ul class="flex flex-wrap  text-center py-20 mx-auto xl:justify-between justify-around gap-6">
+      <ul class="flex flex-wrap  text-center py-20 mx-auto xl:justify-between justify-around sm:gap-5">
         <li class="flex items-center sm:items-end flex-col sm:flex-row max-w-[420px] my-10">
           <img src="../public/banka.png" width="120px" height="297px" alt="" />
           <div class="ml-5 mt-5">

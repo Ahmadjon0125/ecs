@@ -11,7 +11,7 @@
                     </div>
                     <textarea class="bg-white py-6 sm:pl-10 pl-2 sm:ml-5" name="" id="" cols="30" rows="8" placeholder="Комментарий"></textarea>
                 </div>
-                <div class="flex py-5" ><button class="ml-auto py-2 px-15 font-bold text-[#146699] border border-[#146699] hover:bg-sky-700 hover:text-white rounded cursor-pointer" type="submit">Отправить</button></div>
+                <div class="flex py-5" ><button class="ml-auto py-2 sm:px-15 px-5 font-bold text-[#146699] border border-[#146699] hover:bg-sky-700 hover:text-white rounded cursor-pointer" type="submit">Отправить</button></div>
             </form>
         </div>
     </section>
