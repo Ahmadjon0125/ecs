@@ -1,5 +1,5 @@
 <template>
-  <section class="about-hero pt-35">
+  <section class="about-hero lg:pt-35 pt-25">
     <Breadcrumb
       :title="' Алюминиевые банки'"
       :subtitle="'Главная '"
@@ -9,7 +9,7 @@
   <!--          ---------------------------         -->
   <section>
     <div class="container">
-      <ul class="flex flex-wrap  text-center py-20 mx-auto xl:justify-between justify-around sm:gap-5">
+      <ul class="flex flex-wrap  text-center py-20 mx-auto xl:justify-between justify-around sm:gap-5 gap-3">
         <li class="flex items-center sm:items-end flex-col sm:flex-row max-w-[420px] my-10">
           <img src="../public/banka.png" width="120px" height="297px" alt="" />
           <div class="ml-5 mt-5">
@@ -112,9 +112,23 @@
   background-size: cover;
 }
 
+@media (max-width:1024px) {
+  .about-hero {
+  max-height: 40vh;
+
+}
+}
+
+@media (max-width:768px) {
+  .about-hero {
+  max-height: 35vh;
+
+}
+}
+
 @media (max-width:640px) {
   .about-hero {
-  height: 35vh;
+  max-height: 30vh;
 
 }
 }

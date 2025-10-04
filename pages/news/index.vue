@@ -1,5 +1,5 @@
 <template>
-  <div class="news-hero pt-35">
+  <div class="news-hero lg:pt-35 pt-25">
     <Breadcrumb
       :title="' Новости и пресса'"
       :subtitle="'Главная '"
@@ -24,6 +24,27 @@
   height: 50vh;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+@media (max-width:1024px) {
+  .about-hero {
+  max-height: 35vh;
+
+}
+}
+
+@media (max-width:768px) {
+  .about-hero {
+  max-height: 30vh;
+
+}
+}
+
+@media (max-width:640px) {
+  .about-hero {
+  max-height: 24vh;
+
+}
 }
 </style>
 

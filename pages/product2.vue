@@ -1,5 +1,5 @@
 <template>
-  <section class="about-hero pt-35">
+  <section class="about-hero lg:pt-35 pt-25">
     <Breadcrumb
       :title="' Розлив напитков'"
       :subtitle="'Главная '"
@@ -19,9 +19,23 @@
   background-size: cover;
 }
 
+@media (max-width:1024px) {
+  .about-hero {
+  max-height: 35vh;
+
+}
+}
+
+@media (max-width:768px) {
+  .about-hero {
+  max-height: 30vh;
+
+}
+}
+
 @media (max-width:640px) {
   .about-hero {
-  height: 35vh;
+  max-height: 24vh;
 
 }
 }

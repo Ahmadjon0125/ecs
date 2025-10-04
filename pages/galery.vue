@@ -1,5 +1,5 @@
 <template>
-  <div class="galery-hero pt-35">
+  <div class="galery-hero lg:pt-35 pt-25">
     <Breadcrumb
       :title="'Галерея '"
       :subtitle="'Главная '"
@@ -115,7 +115,7 @@
             v-for="video in videos" 
             :key="video.id" 
             @click="selectVideo(video)" 
-            class="relative aspect-video cursor-pointer rounded-lg overflow-hidden border-2 transition mb-20 z-20"
+            class="relative aspect-video cursor-pointer rounded-lg overflow-hidden border-2 transition xl:mb-15 lg:mb-10 md:mb-8 sm:mb-3 mb-1 z-20"
             :class="{'border-blue-600 shadow-md': video.id === activeVideo.id, 'border-transparent': video.id !== activeVideo.id}"
         >
             <img 
@@ -168,9 +168,23 @@
   background-size: cover;
 }
 
+@media (max-width:1024px) {
+  .galery-hero {
+  max-height: 35vh;
+
+}
+}
+
+@media (max-width:768px) {
+  .galery-hero {
+  max-height: 30vh;
+
+}
+}
+
 @media (max-width:640px) {
   .galery-hero {
-  height: 30vh;
+  max-height: 24vh;
 
 }
 }
@@ -181,12 +195,20 @@
   font-size: 32px;
   font-weight: 600;
 }
+
+@media (max-width:600px) {
+ .el-tabs--card>.el-tabs__header .el-tabs__item {
+  font-size: 15px;
+  padding: 8px;
+}
+}
+
 .demo-tabs .custom-tabs-label .el-icon {
   vertical-align: middle;
 }
 .demo-tabs .custom-tabs-label span {
   vertical-align: middle;
-  margin-left: 4px;
+  margin-left: 2px;
 }
 
 .el-tabs__item {

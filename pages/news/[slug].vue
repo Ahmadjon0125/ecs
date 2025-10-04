@@ -1,5 +1,5 @@
 <template>
-  <div class="news-hero pt-35">
+  <div class="news-hero lg:pt-35 pt-25">
     <Breadcrumb
       :title="' Новости и пресса'"
       :subtitle="'Главная '"
@@ -9,7 +9,7 @@
 
   <section>
     <div class="container">
-      <div v-for="(item, index) in items" :key="index" class="lg:px-50 py-2">
+      <div v-for="(item, index) in items" :key="index" class="lg:px-50 py-3">
         <div v-if="item.slug == $route.params.slug">
           <img :src="item.img" alt="" width="1100px" height="600px" />
           <h2 class="text-[#323232] font-bold sm:text-[30px] text-[20px] mb-4">
@@ -45,6 +45,28 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+@media (max-width:1024px) {
+  .about-hero {
+  max-height: 35vh;
+
+}
+}
+
+@media (max-width:768px) {
+  .about-hero {
+  max-height: 30vh;
+
+}
+}
+
+@media (max-width:640px) {
+  .about-hero {
+  max-height: 24vh;
+
+}
+}
+
 </style>
 
 <script setup>

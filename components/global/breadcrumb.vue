@@ -1,18 +1,18 @@
 <template>
-  <section class="text-white container ">
+  <div class="text-white container ">
     <div class=" border-t-1 border-white">
-      <h2 class=" font-semibold md:text-[50px] sm:text-[40px] text-[22px] uppercase sm:pt-15 pt-5">{{ title }}</h2>
-      <ul class="flex flex-col sm:flex-row">
+      <h2 class=" font-semibold lg:text-[50px] sm:text-[30px] md:text-[40] text-[22px] uppercase sm:pt-15 pt-5">{{ title }}</h2>
+      <ul class="flex ">
         <li class="flex">
           <NuxtLink to="/">{{ subtitle }}</NuxtLink>
-          <span class="mx-4 sm:block hidden"> |</span>
+          <span class="mx-4 "> |</span>
         </li>
         <li>
           <NuxtLink :to="route">{{ title }}</NuxtLink>
         </li>
       </ul>
     </div>
-  </section>
+  </div>
 </template>
 
 <style>

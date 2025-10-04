@@ -1,5 +1,5 @@
 <template>
-  <div class="contact-hero pt-35">
+  <div class="contact-hero md:pt-35 pt-25">
     <Breadcrumb
       :title="' Контакты'"
       :subtitle="'Главная '"
@@ -8,7 +8,7 @@
   </div>
   <section>
     <div class="container">
-      <ul class="grid sm:grid-cols-3 grid-cols-1 sm:gap-20 lg:gap-30 gap-10 text-center py-20">
+      <ul class="grid sm:grid-cols-3 grid-cols-1 sm:gap-20 lg:gap-30 gap-10 text-center py-10 sm:py-20">
         <li>
           <h2 class="text-[#146699] font-semibold text-[16px] uppercase">
             Адрес
@@ -56,12 +56,27 @@
   background-size: cover;
 }
 
-@media (max-width:640px) {
-  .contact-hero {
-  height: 30vh;
+@media (max-width:1024px) {
+  .about-hero {
+  max-height: 35vh;
 
 }
 }
+
+@media (max-width:768px) {
+  .about-hero {
+  max-height: 30vh;
+
+}
+}
+
+@media (max-width:640px) {
+  .about-hero {
+  max-height: 24vh;
+
+}
+} 
+
 </style>
 
 <script setup>

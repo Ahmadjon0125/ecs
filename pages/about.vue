@@ -1,7 +1,7 @@
 <template>
-  <div class="about-hero pt-35">
+  <section class="about-hero lg:pt-35 pt-25">
     <Breadcrumb :title="' О нас'" :subtitle="'Главная '" :route="'about'" />
-  </div>
+  </section>
   <Factory :showButton="false" />
   <InfoCard :content="section1" />
   <InfoCard :content="section2" :reverse="true" />
@@ -10,14 +10,29 @@
 <style scoped>
 .about-hero {
   background-image: url("../public/aboutHero.png");
-  height: 50vh;
+  height: 40vh;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
+
+@media (max-width:1024px) {
+  .about-hero {
+  max-height: 35vh;
+
+}
+}
+
+@media (max-width:768px) {
+  .about-hero {
+  max-height: 30vh;
+
+}
+}
+
 @media (max-width:640px) {
   .about-hero {
-  height: 30vh;
+  max-height: 24vh;
 
 }
 }

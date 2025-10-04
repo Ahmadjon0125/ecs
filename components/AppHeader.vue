@@ -8,7 +8,7 @@
     <div class="container">
       <div class="flex items-center justify-between py-3">
         <!-- Logo -->
-        <NuxtLink class="header_logo z-[110]" to="/">
+        <NuxtLink class="header_logo z-[90]" to="/">
           <NuxtImg src="/logo.svg" width="100" height="105" class="md:w-[138px]" />
         </NuxtLink>
 
@@ -65,7 +65,7 @@
     <Transition name="slide">
       <div
         v-if="isOpen"
-        class="lg:hidden fixed top-0 right-0 h-full w-64 bg-gray-900 bg-opacity-95 backdrop-blur-xl z-[95] shadow-2xl"
+        class="lg:hidden fixed top-0 left-0 h-full w-64 bg-gray-900 bg-opacity-95 backdrop-blur-xl z-[95] shadow-2xl"
       >
         <nav class="flex flex-col h-full pt-20 px-6">
           <ul class="space-y-1">
@@ -152,6 +152,10 @@ onBeforeUnmount(() => {
   font-weight: 500;
 }
 
+.mobile-nav-link:hover {
+  color: black;
+}
+
 .router-link-exact-active.mobile-nav-link {
   background: rgba(255, 255, 255, 0.15);
   color: #ffffff;
@@ -180,6 +184,6 @@ onBeforeUnmount(() => {
 
 .slide-enter-from,
 .slide-leave-to {
-  transform: translateX(100%);
+  transform: translateX(-100%);
 }
 </style>

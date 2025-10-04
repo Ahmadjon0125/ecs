@@ -284,6 +284,10 @@
   height: 200px;
 }
 
+.el-image-viewer__mask {
+  opacity: -1;
+}
+
 .galery {
   position: relative;
   /* padding-left: 30px; */
