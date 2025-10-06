@@ -5,7 +5,7 @@ const props= defineProps(['title']);
 
 <template>
   <section class="container text-white pt-25 pb-15 sm:py-30 md:py-40 lg:py-60 xl:py-70 2xl:py-80">
-    <h1 class="xl:text-[90px] lg:text-[80px] md:text-[70px] sm:text-[50px] font-black max-w-[250px] sm:max-w-[560px] leading-none">
+    <h1 class="xl:text-[90px] lg:text-[80px] md:text-[70px] sm:text-[50px] text-[25px] font-black max-w-[250px]  sm:max-w-[560px] leading-none">
       East Can Solutions
     </h1>
   <p class="test-after">

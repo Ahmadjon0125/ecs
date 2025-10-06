@@ -46,6 +46,16 @@
       class="sm:h-100 md:h-150"
     ></iframe>
   </section>
+
+  <section>
+    <div class="container">
+      <ul class="py-35 flex cards">
+        <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Numquam earum error quis provident dicta a ratione maxime in quasi? Optio beatae ex excepturi dolores aperiam explicabo veritatis ipsam quasi asperiores modi enim necessitatibus atque odio vel voluptatum, ad hic sint commodi tempore nesciunt nulla! Similique accusamus sit cumque fugiat doloremque!</li>
+        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse vitae reprehenderit iste nisi, nemo odit accusamus facilis culpa accusantium aut maiores sunt eius deleniti obcaecati voluptas nulla dolore inventore aliquid rerum quam aliquam quo porro ipsam ipsum. Sequi est harum accusamus fuga delectus aspernatur tempore porro quam, rem a aperiam fugit libero quasi corrupti quas ad recusandae tenetur? Tempore ea aliquid asperiores quisquam suscipit porro, nulla unde a consequuntur, aperiam debitis rem ipsam exercitationem reprehenderit laudantium perspiciatis? Laudantium libero modi ipsam magnam! Consectetur mollitia at natus ab possimus nihil dicta commodi, veniam cum nobis non sint vero quo nostrum magni.</li>
+        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis eveniet inventore eos exercitationem, deserunt similique aperiam quod fuga quam dolore aliquam non quae nulla nam sit in voluptas perferendis nemo saepe molestiae maxime sunt. Praesentium dolorum reiciendis hic possimus itaque, quia recusandae. Ullam nostrum distinctio qui ratione laboriosam modi repudiandae!</li>
+      </ul>
+    </div>
+  </section>
 </template>
 
 <style scoped>
@@ -77,6 +87,17 @@
 }
 } 
 
+
+
+
+.cards li  {
+  border: 2px solid black;
+  margin: 5px;
+  padding: 10px;
+  max-width: 400px;
+  height: 400px;
+  font-size: 18px;
+}
 </style>
 
 <script setup>

@@ -9,22 +9,22 @@
           </NuxtLink>
 
           <h2
-            class="sm:text-[30px] text-[15px] font-bold text-[#146699] uppercase mt-6 text-center md:text-start max-w-[600px]"
+            class="lg:text-[30px] md:text-[25px] sm:text-[20px] text-[18px] font-bold text-[#146699] uppercase mt-6 text-center md:text-start max-w-[600px]"
           >
             Первый производитель алюминиевых банок в Узбекистане
           </h2>
 
           <div class="flex flex-col sm:flex-row gap-6 mt-6 items-center text-center md:text-start">
             <div class="max-w-[280px]">
-              <h3 class=" sm:text-[30px] text-[15px] font-bold text-[#146699]">До 2,2 млрд</h3>
-              <p class="font-semibold sm:text-[20px] text-[14px] ">Банок в год</p>
+              <h3 class=" lg:text-[30px] md:text-[25px] sm:text-[20px] text-[18px] font-bold text-[#146699]">До 2,2 млрд</h3>
+              <p class="font-semibold lg:text-[20px] md:text-[18px] sm:text-[16px] text-[14px] ">Банок в год</p>
               <p class="text-gray-700 sm:text-[16px] text-[14px] ">
                 с вводом в эксплуатацию второй производственной линии
               </p>
             </div>
             <div class="max-w-[280px] sm:ml-5">
-              <h3 class=" sm:text-[30px] text-[15px] font-bold text-[#146699]">До 30%</h3>
-              <p class="font-semibold sm:text-[20px] text-[14px]">Продукции на экспорт</p>
+              <h3 class=" lg:text-[30px] md:text-[25px] sm:text-[20px] text-[18px] font-bold text-[#146699]">До 30%</h3>
+              <p class="font-semibold lg:text-[20px] md:text-[18px] sm:text-[16px] text-[14px]">Продукции на экспорт</p>
               <p class="text-gray-700 sm:text-[16px] text-[14px] " >
                 в Россию, Казахстан и другие страны СНГ.
               </p>
@@ -44,7 +44,7 @@
         <div
           class="relative xl:pl-15 md:pr-5  px-5  pb-20 flex flex-col gap-6 text-white h-full justify-center max-w-[680px ]"
         >
-          <h2 class="sm:text-[50px] text-[20px] font-bold uppercase">О заводе</h2>
+          <h2 class="md:text-[50px] sm:text-[35px] text-[25px] font-bold uppercase">О заводе</h2>
           <p class="max-w-150">
             East Can Solutions — первая компания в Республике Узбекистан,
             специализирующаяся на производстве высококачественных алюминиевых

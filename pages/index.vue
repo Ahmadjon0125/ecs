@@ -10,7 +10,7 @@
       <!-- Sarlavha va tugma -->
       <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-6 galery">
         <h2
-          class="text-[#146699] md:text-[50px] sm:text-[30px] text-[20px] font-semibold uppercase sm:py-10 py-2 relative z-10 bg-white"
+          class="text-[#146699] md:text-[50px] sm:text-[35px] text-[25px] font-semibold uppercase sm:py-10 py-2 relative z-10 bg-white"
         >
           Галерея
         </h2>
@@ -216,7 +216,7 @@
         <div class="grid md:grid-cols-2 grid-cols-1  lg:gap-10 gap-5 text-white ">
           <NuxtLink to="/product1">
             <div
-              class="lg:px-[50px] md:px-7 sm:px-5 px-4 pb-[44px] xl:pt-52 lg:pt-25 pt-10 sm:pt-15 bg-[url('./productBg1.png')] bg-no-repeat h-full   bg-cover  lg:min-h-[400px] xl:min-h-[450px]"
+              class="lg:px-[50px] md:px-7 sm:px-5 px-4 pb-[44px] xl:pt-52 lg:pt-25 pt-10 sm:pt-15 bg-[url('/product1Bg.png')] bg-no-repeat h-full   bg-cover  lg:min-h-[400px] xl:min-h-[450px]"
             >
               <h2 class="font-semibold lg:text-[24px]">Алюминиевые банки</h2>
               <p class="py-5 ">
@@ -376,8 +376,6 @@ const videoSrcAutoplay = videoSrcEmbed + "?autoplay=1";
 
 
 
-
-// const showPreview = ref(false);
 
 const srcList = [
   "/img1.jpg",

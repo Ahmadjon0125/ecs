@@ -7,7 +7,7 @@
             <NuxtLink>
               <div class="flex items-center">
                 <img src="/location.png" width="18px" height="18px" alt="" />
-                <p class="max-w-[234px] md:w-full">17a Temur Malik St., Tashkent city, Uzbekistan</p>
+                <p class="max-w-[234px] md:w-full text-center sm:text-start">17a Temur Malik St., Tashkent city, Uzbekistan</p>
               </div>
             </NuxtLink>
           </li>
