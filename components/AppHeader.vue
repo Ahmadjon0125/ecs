@@ -2,7 +2,7 @@
   <header
     :class="[
       'fixed top-0 left-0 w-full z-[100] transition-all duration-300 text-white',
-      isScrolled && !isOpen ? 'backdrop-blur-lg backdrop-brightness-75' : 'bg-transparent',
+      isScrolled && !isOpen ? 'backdrop-blur-lg backdrop-brightness-45' : 'bg-transparent',
     ]"
   >
     <div class="container">

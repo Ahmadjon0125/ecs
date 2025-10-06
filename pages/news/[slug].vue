@@ -9,7 +9,7 @@
 
   <section>
     <div class="container">
-      <div v-for="(item, index) in items" :key="index" class="lg:px-50 py-3">
+      <div v-for="(item, index) in items" :key="index" class="xl:px-28 lg:px-24 md:px-20px sm:px-16  pt-4 sm:pt-10">
         <div v-if="item.slug == $route.params.slug">
           <img :src="item.img" alt="" width="1100px" height="600px" />
           <h2 class="text-[#323232] font-bold sm:text-[30px] text-[20px] mb-4">
@@ -27,7 +27,7 @@
           <p class="text-[#323232] sm:text-[18px] font-medium mb-2">
             {{ item.text }} {{ item.text }}{{ item.text }}{{ item.text }}
           </p>
-          <p class="text-[#323232] sm:text-[18px] font-medium mb-12">
+          <p class="text-[#323232] sm:text-[18px] font-medium ">
             {{ item.text }}{{ item.text }}{{ item.text }}{{ item.text }}
           </p>
         </div>
