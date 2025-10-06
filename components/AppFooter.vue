@@ -33,9 +33,9 @@
             </NuxtLink>
           </li>
         </ul>
-        <div class="sm:mr-25 my-15 sm:my-0">
+        <div class="sm:mr-25 my-6 sm:my-0">
           <NuxtLink to="/">
-            <NuxtImg src="/logo.svg" width="150px" height="105px"  class="md:w-[200px] sm:ml-2  " />
+            <NuxtImg src="/logo.svg" width="150px" height="105px"  class="md:w-[200px] sm:ml-2" />
           </NuxtLink>
         </div>
         <ul class="fooNav flex flex-col lg:items-center text-center sm:text-start lg:space-x-3">
@@ -69,7 +69,7 @@ footer {
 
 @media (max-width: 640px) {
   .footer-list li {
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 
 
@@ -91,7 +91,7 @@ footer {
 
 @media (max-width: 640px) {
   .fooNav li {
-    margin-bottom: 10px;
+    margin-bottom: 5px;
   }
   
 }

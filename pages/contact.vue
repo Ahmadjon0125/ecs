@@ -13,7 +13,7 @@
           <h2 class="text-[#146699] font-semibold text-[16px] uppercase">
             Адрес
           </h2>
-          <p class="medium text-[20px]">
+          <p class="medium md:text-[20px] sm:text-[18px] text-[16px]">
             17a Temur Malik St., Tashkent city, Uzbekistan
           </p>
         </li>
@@ -21,13 +21,13 @@
           <h2 class="text-[#146699] font-semibold text-[16px] uppercase">
             Телефон
           </h2>
-          <p class="medium text-[20px]">+998 93 505 4 505</p>
+          <p class="medium md:text-[20px] sm:text-[18px] text-[16px]">+998 93 505 4 505</p>
         </li>
         <li>
           <h2 class="text-[#146699] font-semibold text-[16px] uppercase">
             Email
           </h2>
-          <p class="medium text-[20px]">info@can.uz</p>
+          <p class="medium md:text-[20px] sm:text-[18px] text-[16px]">info@can.uz</p>
         </li>
       </ul>
     </div>
