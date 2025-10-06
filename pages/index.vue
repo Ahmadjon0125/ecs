@@ -216,7 +216,7 @@
         <div class="grid md:grid-cols-2 grid-cols-1  lg:gap-10 gap-5 text-white ">
           <NuxtLink to="/product1">
             <div
-              class="lg:px-[50px] md:px-7 sm:px-5 px-4 pb-[44px] xl:pt-52 lg:pt-25 pt-10 sm:pt-15 bg-[url('/product1Bg.png')] bg-no-repeat h-full   bg-cover  lg:min-h-[400px] xl:min-h-[450px]"
+              class="lg:px-[50px] md:px-7 sm:px-5 px-4 pb-[44px] xl:pt-52 lg:pt-25 pt-10 sm:pt-15 bg-[url('/productBg1.png')] bg-no-repeat h-full   bg-cover  lg:min-h-[400px] xl:min-h-[450px]"
             >
               <h2 class="font-semibold lg:text-[24px]">Алюминиевые банки</h2>
               <p class="py-5 ">
@@ -229,7 +229,7 @@
           </NuxtLink>
           <NuxtLink to="/product2">
             <div
-              class="lg:px-[50px] md:px-7 sm:px-5 px-4 pb-[44px] xl:pt-52 lg:pt-25 sm:pt-15 pt-10 bg-[url('./productBg2.png')] bg-no-repeat h-full bg-cover lg:min-h-[400px] xl:min-h-[450px] "
+              class="lg:px-[50px] md:px-7 sm:px-5 px-4 pb-[44px] xl:pt-52 lg:pt-25 sm:pt-15 pt-10 bg-[url('/productBg2.png')] bg-no-repeat h-full bg-cover lg:min-h-[400px] xl:min-h-[450px] "
             >
               <h2 class="font-semibold lg:text-[24px]">Розлив напитков</h2>
               <p class="py-5">
@@ -376,6 +376,8 @@ const videoSrcAutoplay = videoSrcEmbed + "?autoplay=1";
 
 
 
+
+// const showPreview = ref(false);
 
 const srcList = [
   "/img1.jpg",
