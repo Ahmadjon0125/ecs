@@ -41,28 +41,28 @@
 <style scoped>
 .news-hero {
   background-image: url("/newsBg.png");
-  height: 50vh;
+  height: 42vh;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 @media (max-width:1024px) {
   .news-hero {
-  max-height: 35vh;
+  max-height: 37vh;
 
 }
 }
 
 @media (max-width:768px) {
   .news-hero {
-  max-height: 30vh;
+  max-height: 32vh;
 
 }
 }
 
 @media (max-width:640px) {
   .news-hero {
-  max-height: 24vh;
+  max-height: 26vh;
 
 }
 }
