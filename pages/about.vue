@@ -10,7 +10,7 @@
 <style scoped>
 .about-hero {
   background-image: url("../public/aboutHero.png");
-  height: 40vh;
+  height: 42vh;
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -18,21 +18,21 @@
 
 @media (max-width:1024px) {
   .about-hero {
-  height: 35vh;
+  height: 37vh;
 
 }
 }
 
 @media (max-width:768px) {
   .about-hero {
-  height: 30vh;
+  height: 32vh;
 
 }
 }
 
 @media (max-width:640px) {
   .about-hero {
-  height: 24vh;
+  height: 26vh;
 
 }
 }
