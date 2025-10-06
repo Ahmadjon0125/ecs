@@ -18,21 +18,21 @@
 
 @media (max-width:1024px) {
   .about-hero {
-  max-height: 35vh;
+  height: 35vh;
 
 }
 }
 
 @media (max-width:768px) {
   .about-hero {
-  max-height: 30vh;
+  height: 30vh;
 
 }
 }
 
 @media (max-width:640px) {
   .about-hero {
-  max-height: 24vh;
+  height: 24vh;
 
 }
 }

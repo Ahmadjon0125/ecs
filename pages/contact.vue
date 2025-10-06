@@ -47,7 +47,7 @@
     ></iframe>
   </section>
 
-  <section>
+  <!-- <section>
     <div class="container">
       <ul class="py-35 flex cards">
         <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Numquam earum error quis provident dicta a ratione maxime in quasi? Optio beatae ex excepturi dolores aperiam explicabo veritatis ipsam quasi asperiores modi enim necessitatibus atque odio vel voluptatum, ad hic sint commodi tempore nesciunt nulla! Similique accusamus sit cumque fugiat doloremque!</li>
@@ -55,7 +55,7 @@
         <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis eveniet inventore eos exercitationem, deserunt similique aperiam quod fuga quam dolore aliquam non quae nulla nam sit in voluptas perferendis nemo saepe molestiae maxime sunt. Praesentium dolorum reiciendis hic possimus itaque, quia recusandae. Ullam nostrum distinctio qui ratione laboriosam modi repudiandae!</li>
       </ul>
     </div>
-  </section>
+  </section> -->
 </template>
 
 <style scoped>
