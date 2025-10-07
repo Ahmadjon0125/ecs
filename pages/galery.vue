@@ -14,10 +14,6 @@
           <el-tab-pane label="Фото">
             <h2 class="font-semibold uppercase text-[#146699] py-4">Фото</h2>
 
-  
-
-
-
 
                  <el-carousel 
       ref="carouselRef" 
@@ -25,7 +21,7 @@
       arrow="always"
       :autoplay="false"
       @change="handleSlideChange"
-      class="mb-4 max-w-[1280px] mx-auto"
+      class="mb-4 max-w-[1300px] mx-auto"
     >
       <el-carousel-item 
         v-for="(item, index) in srcList" 
@@ -88,7 +84,7 @@
             <h2>Видео</h2>
 
 
-              <div class="max-w-[1280px] mx-auto p-4">
+              <div class="max-w-[1300px] mx-auto p-4">
     
     <div class="relative w-full aspect-video shadow-xl mb-8 rounded-lg overflow-hidden">
         
@@ -110,7 +106,7 @@
         ></iframe>
     </div>
 
-    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4 z-20">
+    <div class="grid grid-cols-3 gap-1 sm:gap-4 z-20">
         <div 
             v-for="video in videos" 
             :key="video.id" 
@@ -125,7 +121,7 @@
             >
              <svg class="absolute inset-0 m-auto w-8 h-8 text-white opacity-90" viewBox="0 0 24 24" fill="currentColor"><path d="M6 3l15 9-15 9V3z"/></svg>
             
-            <p class="absolute top-92  z-200 bg-black left-2 text-white text-lg max-w-full truncate">{{ video.title }}</p>
+            <p class="absolute top-90  z-200 bg-black left-2 text-white text-lg max-w-full truncate">{{ video.title }}</p>
         </div>
     </div>
     
@@ -190,10 +186,19 @@
 }
 
 .demo-tabs > .el-tabs__content {
-  padding: 62px;
+  padding: 50px;
   color: #6b778c;
   font-size: 32px;
   font-weight: 600;
+}
+
+@media (max-width: 500px) {
+  .demo-tabs > .el-tabs__content {
+  padding: 5px;
+  color: #6b778c;
+  font-size: 32px;
+  font-weight: 600;
+}
 }
 
 @media (max-width:600px) {
