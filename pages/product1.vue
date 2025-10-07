@@ -107,14 +107,14 @@
 <style scoped>
 .about-hero {
   background-image: url("../public/product1Bg.png");
-  height: 50vh;
+  height: 42vh;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 @media (max-width:1024px) {
   .about-hero {
-  max-height: 40vh;
+  max-height: 37vh;
 
 }
 }

@@ -135,6 +135,10 @@
           </el-image>
         </div>
 
+
+
+  
+
         <!-- O‘ng 1 ustun – video blok -->
  
 
@@ -209,7 +213,7 @@
     <div class="container">
       <div class="product ">
         <h2
-          class="prod text-[#146699] bg-[#F4F9FB] md:text-[50px] sm:text-[30px] text-[20px] inline-block  font-semibold uppercase sm:py-10 py-4  z-10 relative "
+          class="prod text-[#146699] bg-[#F4F9FB] md:text-[50px] sm:text-[35px] text-[25px] inline-block  font-semibold uppercase sm:py-10 py-4  z-10 relative "
         >
           Продукция
         </h2>
@@ -285,8 +289,15 @@
 }
 
 .el-image-viewer__mask {
-  opacity: -1;
+    background: #000;
+    height: 100%;
+    left: 0;
+    opacity: 0.9 !important;
+    position: absolute;
+    top: 0;
+    width: 100%;
 }
+
 
 .galery {
   position: relative;
@@ -360,6 +371,11 @@
 </style>
 
 <script setup>
+
+
+
+
+
 import { ref } from "vue";
 import { Picture as IconPicture } from "@element-plus/icons-vue";
 
